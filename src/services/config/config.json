@@ -1,4 +1,6 @@
+
+
 {
-    "ApiServiceBaseUrl":"https://littlesuns.digispurenterprises.com/"
+    "ApiServiceBaseUrl":"http://localhost:3500/"
 
 }

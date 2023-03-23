@@ -20,7 +20,7 @@ const FullStudentDetails = () => {
 
     //const { id } = state || {};
     useEffect(() => {
-        if (!location.state || !location.state.data){navigate('/view/students')}
+        if (!location.state || !location.state.data){navigate('/view/students',{replace:true})}
         setStudentData(state.data)
         setGurdiansData(state.data.student_parent.sort((a, b) => a.parent_relationship - b.parent_relationship));
         //console.log("state.data.student_id",state.data.student_id)

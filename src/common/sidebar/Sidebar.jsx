@@ -14,7 +14,7 @@ const Sidebar = () => {
   }  
 
   return (
-    <div id="sidebar" className="active">
+    <sidebar id="sidebar" className="active">
             <div className="sidebar-wrapper active">
     <div className="sidebar-header position-relative">
         <div className="d-flex justify-content-between align-items-center">
@@ -79,7 +79,7 @@ const Sidebar = () => {
         </ul>
     </div>
 </div>
-        </div>
+        </sidebar>
   )
 }
 

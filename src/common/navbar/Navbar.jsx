@@ -9,6 +9,15 @@ const Navbar = () => {
         setDropDown(!dropDown)
 
     }
+    const handleSidebarToggle = () => {
+        const htmlElement = document.querySelector('sidebar');
+        if (htmlElement.className=='') {
+            htmlElement.className = 'active';
+          }
+          else if (htmlElement.className=='active') {
+            htmlElement.className = '';
+          }
+        }
     const handleClickOutside = (event) => {
         if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
           setDropDown(false);
@@ -24,11 +33,11 @@ const Navbar = () => {
   return (
               <nav class="navbar navbar-expand navbar-light navbar-top">
                     <div class="container-fluid">
-                        <a href="#" class="burger-btn d-block">
+                        <a href="#" class="burger-btn d-block" onClick={handleSidebarToggle}>
                             <i class="bi bi-justify fs-3"></i>
                         </a>
 
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>

@@ -36,6 +36,7 @@ import { findArrayValue } from '../../utils/utilFunctions';
 const ViewStudents = () => {
     const [modalCreateParent, setModalCreateParent] = useState(false);
     const [modalCreateStudent, setModalcreateStudent] = useState(false);
+    const [modalUpdateStudent, setModalUpdateStudent] = useState(false);
     const [modalViewStudent, setModalViewStudent] = useState(false);
     const [createStudentDetails, setCreateStudentDetails] = useState(createStudentInitialStates);
     const [createParentDetails, setCreateParentDetails] = useState(createParentInitialStates);
@@ -61,6 +62,12 @@ const ViewStudents = () => {
     const handletoggleModalCreateParent = (item) => {
         setModalCreateParent(!modalCreateParent);
         setCurrentViewRecord(item);
+
+       };
+    const handletoggleModalUpdateStudent = (item) => {
+          setModalUpdateStudent(!modalUpdateStudent);
+          setCurrentViewRecord(item);
+          console.log("item",item)
 
        };
     const handletoggleViewStudentDetails = (item) => {
@@ -478,7 +485,7 @@ const ViewStudents = () => {
                                           shape="square"
                                           size="sm"
                                           onClick={() =>
-                                            handletoggleModalCreateParent(item)
+                                            handletoggleModalUpdateStudent(item)
                                           }
                                         >
                                           Edit Student Details
@@ -713,6 +720,107 @@ const ViewStudents = () => {
         }
        
       />
+      <Modal
+        modalState={modalUpdateStudent}
+        modalTitle={<h4>{"Update "+currentViewRecord.student_three_names +" Details"}</h4>}
+        //handleClose={handletoggleModalCreateStudent}
+        handleClose={() => setModalUpdateStudent(false)}
+
+        modalBody={
+          <span>
+            
+            <CCardBody>
+            <div className="card-body">
+                <div className="row">
+                    <div className="col-md-12">
+                       <form onSubmit={handleSubmitStudent}>
+                        <ModalInput
+                         onChange={handleChange}
+                        //   value=
+                          name="firstname"
+                          id="firstname"
+                          InputType="text"
+                          placeholder="Enter Firstname"
+                          label={currentViewRecord.student_firstname}
+                        />
+                        <br/>
+                        <ModalInput
+                          onChange={handleChange}
+                        //   value=
+                          name="secondname"
+                          id="secondname"
+                          InputType="text"
+                          placeholder="Enter Secondname"
+                          label={currentViewRecord.student_secondname}
+                        />
+                        <br/>
+
+                        <ModalInput
+                          onChange={handleChange}
+                        //   value=
+                          name="lastname"
+                          id="lastname"
+                          InputType="text"
+                          placeholder="Enter Lastname"
+                          label={currentViewRecord.student_lastname}
+                        />
+                        <br/>
+                        <ModalInput
+                          onChange={handleChange}
+                        //   value=
+                          name="DOB"
+                          id="DOB"
+                          InputType="date"
+                          //placeholder="Enter Lastname"
+                          label={currentViewRecord.student_DOB}
+                        />
+                        <br/>
+                        <ModalInput
+                          onChange={handleChange}
+                        //   value=
+                          name="age"
+                          id="age"
+                          InputType="number"
+                          placeholder="Enter Age"
+                          label={currentViewRecord.student_age}
+                          max={24}
+                        />
+                        <br/>
+                        <ModalSelect
+                           label={currentViewRecord.student_gender}
+                           arrayData={genderArray}
+                           defaultSelectText={'Select Gender'}
+                           onChange={handleChange}
+                           //value={}
+                           name="gender"
+                           id="gender"
+                           />
+
+                        
+                        <br/>
+                        
+
+                        <div className="modal-footer">
+                            <button type="button" onClick={handletoggleModalCreateStudent} className="btn btn-light-secondary"
+                                data-bs-dismiss="modal">
+                                <i className="bx bx-x d-block d-sm-none"></i>
+                                <span className="d-none d-sm-block">Close</span>
+                            </button>
+                            <button type="submit" className="btn btn-primary ml-1" data-bs-dismiss="modal">
+                                <i className="bx bx-check d-block d-sm-none"></i>
+                                <span className="d-none d-sm-block">Submit</span>
+                            </button>
+                        </div>
+                      </form>
+                    </div>
+                   
+                </div>
+            </div>
+            </CCardBody>
+          </span>
+        }
+       
+      />
    
       <Modal
         modalState={modalViewStudent}
@@ -733,7 +841,7 @@ const ViewStudents = () => {
                               to="/student/details" state={{ data: currentViewRecord }}
                                 >
                               <i className="bx bx-check d-block d-sm-none"></i>
-                              <span className="d-none d-sm-block">View More Details1</span>
+                              <span className="d-none d-sm-block">View More Details</span>
                             </CLink>
                         </div>
                       </span>
@@ -879,7 +987,8 @@ const ViewStudents = () => {
       <Modal
         modalState={modalCreateParent}
         modalTitle={<h4>{"Add a Parent/Gurdian"}</h4>}
-        handleClose={handletoggleModalCreateParent}
+        handleClose={() => setModalCreateParent(false)}
+        //handleClose={handletoggleModalCreateParent}
         modalBody={
           <span>
   

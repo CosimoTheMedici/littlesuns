@@ -32,7 +32,7 @@ const TakeQuestionnare = () => {
 
 
   useEffect(() => {
-    if (!location.state || !location.state.data){navigate('/view/students')}
+    if (!location.state || !location.state.data){navigate('/view/students',{replace:true})}
     fetchAllQuerysList()
     setStudentData(state.data)
 
