@@ -163,13 +163,13 @@ const CheckAttendance = () => {
   return (
     <section className="tasks">
         <div className="row">
-            <div className="col-lg-7">
+            <div className="col-lg-9">
                 <div className="card widget-todo">
                     <div className="card-header border-bottom d-flex justify-content-between align-items-center">
                         <h4 className="card-title d-flex">
-                            <i className="bx bx-check font-medium-5 pl-25 pr-75"></i>Tasks
+                            <i className="bx bx-check font-medium-5 pl-25 pr-75"></i>Check Attendance
                         </h4>
-                        <ul className="list-inline d-flex mb-0">
+                        {/* <ul className="list-inline d-flex mb-0">
                             <li className="d-flex align-items-center">
                                 <i className="bx bx-check-circle font-medium-3 me-50"></i>
                                 <div className="dropdown">
@@ -196,7 +196,7 @@ const CheckAttendance = () => {
                                     </div>
                                 </div>
                             </li>
-                        </ul>
+                        </ul> */}
                     </div>
                     <div className="card-body px-0 py-1">
                         <ul className="widget-todo-list-wrapper" id="widget-todo-list">
@@ -337,7 +337,7 @@ const CheckAttendance = () => {
                 </div>
             </div>
 
-            <div className="col-lg-5">
+            {/* <div className="col-lg-5">
                 <div className="card widget-todo">
                     <div className="card-header border-bottom d-flex justify-content-between align-items-center">
                         <h4 className="card-title d-flex">
@@ -400,7 +400,7 @@ const CheckAttendance = () => {
                         </table>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     </section>
   )

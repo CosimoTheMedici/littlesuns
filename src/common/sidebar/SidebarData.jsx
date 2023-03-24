@@ -30,11 +30,11 @@ export const   SidebarData = [
       path: '/view/questionare',
       icon: 'bi bi-people'
     },
-    {
-      title: 'Calender',
-      path: '/view/attendane',
-      icon: 'bi bi-people'
-    },
+    // {
+    //   title: 'Calender',
+    //   path: '/view/attendane',
+    //   icon: 'bi bi-people'
+    // },
     // {
     //   title: 'Manage Units',
     //   path: '/',

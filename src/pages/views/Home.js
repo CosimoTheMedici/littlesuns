@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
         <div className="page-heading">
-    <h3>Profile Statistics</h3>
+    <h3>Our Statistics</h3>
 </div>
 <div className="page-content">
     <section className="row">
@@ -21,8 +21,8 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div className="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                    <h6 className="text-muted font-semibold">Profile Views</h6>
-                                    <h6 className="font-extrabold mb-0">112.000</h6>
+                                    <h6 className="text-muted font-semibold">Total Students</h6>
+                                    <h6 className="font-extrabold mb-0">112000</h6>
                                 </div>
                             </div>
                         </div>
@@ -38,8 +38,8 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div className="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                    <h6 className="text-muted font-semibold">Followers</h6>
-                                    <h6 className="font-extrabold mb-0">183.000</h6>
+                                    <h6 className="text-muted font-semibold">Boys</h6>
+                                    <h6 className="font-extrabold mb-0">183000</h6>
                                 </div>
                             </div>
                         </div>
@@ -55,8 +55,8 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div className="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                    <h6 className="text-muted font-semibold">Following</h6>
-                                    <h6 className="font-extrabold mb-0">80.000</h6>
+                                    <h6 className="text-muted font-semibold">Girls</h6>
+                                    <h6 className="font-extrabold mb-0">80000</h6>
                                 </div>
                             </div>
                         </div>
@@ -72,7 +72,7 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div className="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                    <h6 className="text-muted font-semibold">Saved Post</h6>
+                                    <h6 className="text-muted font-semibold">Comments</h6>
                                     <h6 className="font-extrabold mb-0">112</h6>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@ const Home = () => {
                 <div className="col-12">
                     <div className="card">
                         <div className="card-header">
-                            <h4>Profile Visit</h4>
+                            <h4>Attendace Stats</h4>
                         </div>
                         <div className="card-body">
                             <div id="chart-profile-visit"></div>
@@ -96,7 +96,7 @@ const Home = () => {
                 <div className="col-12 col-xl-4">
                     <div className="card">
                         <div className="card-header">
-                            <h4>Profile Visit</h4>
+                            <h4>Attendace Stats</h4>
                         </div>
                         <div className="card-body">
                             <div className="row">
@@ -107,7 +107,7 @@ const Home = () => {
                                             <use
                                                 xlinkHref="assets/images/bootstrap-icons.svg#circle-fill" />
                                         </svg>
-                                        <h5 className="mb-0 ms-3">Europe</h5>
+                                        <h5 className="mb-0 ms-3">Boys</h5>
                                     </div>
                                 </div>
                                 <div className="col-6">
@@ -125,7 +125,7 @@ const Home = () => {
                                             <use
                                                 xlinkHref="assets/images/bootstrap-icons.svg#circle-fill" />
                                         </svg>
-                                        <h5 className="mb-0 ms-3">America</h5>
+                                        <h5 className="mb-0 ms-3">Girls</h5>
                                     </div>
                                 </div>
                                 <div className="col-6">
@@ -138,16 +138,16 @@ const Home = () => {
                             <div className="row">
                                 <div className="col-6">
                                     <div className="d-flex align-items-center">
-                                        <svg className="bi text-danger" width="32" height="32" fill="blue"
+                                        {/* <svg className="bi text-danger" width="32" height="32" fill="blue"
                                             style={{width:"10px"}}>
                                             <use
                                                 xlinkHref="assets/images/bootstrap-icons.svg#circle-fill" />
-                                        </svg>
-                                        <h5 className="mb-0 ms-3">Indonesia</h5>
+                                        </svg> */}
+                                        <h5 className="mb-0 ms-3"></h5>
                                     </div>
                                 </div>
                                 <div className="col-6">
-                                    <h5 className="mb-0">1025</h5>
+                                    <h5 className="mb-0"></h5>
                                 </div>
                                 <div className="col-12">
                                     <div id="chart-indonesia"></div>
@@ -177,7 +177,7 @@ const Home = () => {
                                                     <div className="avatar avatar-md">
                                                         <img src="assets/images/faces/5.jpg"/>
                                                     </div>
-                                                    <p className="font-bold ms-3 mb-0">Si Cantik</p>
+                                                    <p className="font-bold ms-3 mb-0">Name Name</p>
                                                 </div>
                                             </td>
                                             <td className="col-auto">
@@ -190,12 +190,11 @@ const Home = () => {
                                                     <div className="avatar avatar-md">
                                                         <img src="assets/images/faces/2.jpg"/>
                                                     </div>
-                                                    <p className="font-bold ms-3 mb-0">Si Ganteng</p>
+                                                    <p className="font-bold ms-3 mb-0">Name Name</p>
                                                 </div>
                                             </td>
                                             <td className="col-auto">
-                                                <p className=" mb-0">Wow amazing design! Can you make another tutorial for
-                                                    this design?</p>
+                                                <p className=" mb-0">Wow amazing!</p>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -214,15 +213,15 @@ const Home = () => {
                             <img src="assets/images/faces/1.jpg" alt="Face 1"/>
                         </div>
                         <div className="ms-3 name">
-                            <h5 className="font-bold">John Duck</h5>
-                            <h6 className="text-muted mb-0">@johnducky</h6>
+                            <h5 className="font-bold">Top student</h5>
+                            <h6 className="text-muted mb-0">Name Name</h6>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="card">
                 <div className="card-header">
-                    <h4>Recent Messages</h4>
+                    <h4>Recent Students</h4>
                 </div>
                 <div className="card-content pb-4">
                     <div className="recent-message d-flex px-4 py-3">
@@ -230,8 +229,8 @@ const Home = () => {
                             <img src="assets/images/faces/4.jpg"/>
                         </div>
                         <div className="name ms-4">
-                            <h5 className="mb-1">Hank Schrader</h5>
-                            <h6 className="text-muted mb-0">@johnducky</h6>
+                            <h5 className="mb-1">student name</h5>
+                            {/* <h6 className="text-muted mb-0">@johnducky</h6> */}
                         </div>
                     </div>
                     <div className="recent-message d-flex px-4 py-3">
@@ -239,8 +238,8 @@ const Home = () => {
                             <img src="assets/images/faces/5.jpg"/>
                         </div>
                         <div className="name ms-4">
-                            <h5 className="mb-1">Dean Winchester</h5>
-                            <h6 className="text-muted mb-0">@imdean</h6>
+                            <h5 className="mb-1">student name</h5>
+                            {/* <h6 className="text-muted mb-0">@imdean</h6> */}
                         </div>
                     </div>
                     <div className="recent-message d-flex px-4 py-3">
@@ -248,12 +247,12 @@ const Home = () => {
                             <img src="assets/images/faces/1.jpg"/>
                         </div>
                         <div className="name ms-4">
-                            <h5 className="mb-1">John Dodol</h5>
-                            <h6 className="text-muted mb-0">@dodoljohn</h6>
+                            <h5 className="mb-1">student name</h5>
+                            {/* <h6 className="text-muted mb-0">@dodoljohn</h6> */}
                         </div>
                     </div>
                     <div className="px-4">
-                        <button class='btn btn-block btn-xl btn-outline-primary font-bold mt-3'>Start Conversation</button>
+                        <button class='btn btn-block btn-xl btn-outline-primary font-bold mt-3'>View Students</button>
                     </div>
                 </div>
             </div>

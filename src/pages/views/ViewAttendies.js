@@ -303,7 +303,7 @@ const ViewAttendees = () => {
                 <CTabs>
                   <CNav variant="tabs">
                     <CNavItem>
-                      <CNavLink>Manage Students </CNavLink>
+                      <CNavLink>Manage Attendance </CNavLink>
                     </CNavItem>
                   </CNav>
                   <CTabContent>
@@ -346,7 +346,7 @@ const ViewAttendees = () => {
                                   <CDropdown className="m-1">
                                     <CDropdownToggle>Action</CDropdownToggle>
                                     <CDropdownMenu>
-                                      <CDropdownItem>
+                                      {/* <CDropdownItem>
                                         <CButton
                                           color="primary"
                                           variant="outline"
@@ -358,7 +358,7 @@ const ViewAttendees = () => {
                                         >
                                           Edit Student Details
                                         </CButton>
-                                      </CDropdownItem>
+                                      </CDropdownItem> */}
 
                                   
                                       <CDropdownItem>

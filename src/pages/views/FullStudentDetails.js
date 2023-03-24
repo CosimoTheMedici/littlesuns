@@ -134,15 +134,14 @@ const FullStudentDetails = () => {
         <div class="page-title">
             <div class="row">
                 <div class="col-12 col-md-6 order-md-1 order-last">
-                    <h3>Card</h3>
-                    <p class="text-subtitle text-muted">Bootstrap’s cards provide a flexible and extensible content
-                        container with multiple variants and options.</p>
+                    <h3>Student Profile</h3>
+                    <p class="text-subtitle text-muted">All student Details </p>
                 </div>
                 <div class="col-12 col-md-6 order-md-2 order-first">
                     <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Card</li>
+                            <li class="breadcrumb-item active" aria-current="page">Profile</li>
                         </ol>
                     </nav>
                 </div>
@@ -158,7 +157,7 @@ const FullStudentDetails = () => {
                         <div class="card-header text-center">
                         
                         <img src={images.one_image} class="card-img-top img-fluid" alt="singleminded"/>
-                            <h4 class="card-title">Enterpreneur</h4>
+                            {/* <h4 class="card-title">Enterpreneur</h4> */}
                             <p></p>
                          </div>
                          {/* student_DOB: "2023-02-27"
@@ -215,7 +214,7 @@ const FullStudentDetails = () => {
 
                             ))}
                             
-                            <button class="btn btn-primary block">Update now</button>
+                            {/* <button class="btn btn-primary block">Update now</button> */}
                         </div>
                     </div>
                 </div>

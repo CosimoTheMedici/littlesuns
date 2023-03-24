@@ -13,13 +13,23 @@ const Sidebar = () => {
     if(isDarkModeEnabled === false){document.body.className = 'theme-dark'; document.body.style.backgroundColor = '#151521';}
   }  
 
+  const handleSidebarToggle = () => {
+    const htmlElement = document.querySelector('sidebar');
+    if (htmlElement.className=='') {
+        htmlElement.className = 'active';
+      }
+      else if (htmlElement.className=='active') {
+        htmlElement.className = '';
+      }
+    }
+
   return (
     <sidebar id="sidebar" className="active">
             <div className="sidebar-wrapper active">
     <div className="sidebar-header position-relative">
         <div className="d-flex justify-content-between align-items-center">
             <div className="logo">
-                <a href="index.html"><img src="assets/images/logo/logo.svg" alt="Logo" srcset=""/></a>
+                <a href="index.html"><img src="assets/images/logo/log.svg" alt="Logo" srcset=""/></a>
             </div>
             <div className="theme-toggle d-flex gap-2  align-items-center mt-2">
                 <div className="form-check form-switch fs-6">
@@ -33,7 +43,7 @@ const Sidebar = () => {
                     <label className="form-check-label" ></label>
                 </div>
             </div>
-            <div className="sidebar-toggler  x">
+            <div className="sidebar-toggler  x" onClick={handleSidebarToggle}>
                 <a href="#" className="sidebar-hide d-xl-none d-block"><i className="bi bi-x bi-middle"></i></a>
             </div>
         </div>
